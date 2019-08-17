@@ -1,0 +1,7 @@
+
+brctl addbr br0                    (建立一个逻辑网段，名称为br0)
+brctl addif br0 eth0               (让eth0成为br0的一个端口)
+brctl addif br0 eth1               (让eth1成为br0的另外一个端口)
+#ifconfig eth0 down                （将eth0上的IP地址释放掉）
+#ifconfig eth0 0.0.0.0 up
+ifconfig br0 10.0.3.129 up     （打开br0 网桥节  并添加IP地址）
